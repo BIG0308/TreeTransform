@@ -3,14 +3,14 @@ import {Tree} from "antd";
 import {generateTree,isChecked} from "../utils";
 
 function  MyTree(props) {
-    const {treeData,mode,itemSelected,checkedKeys} = props;
+    const {treeData,mode,itemSelected,checkedKeys,target} = props;
     return (
         <Tree
             blockNode
             checkable
             checkStrictly
             checkedKeys={checkedKeys}
-            treeData={generateTree(treeData[mode],[])}
+            treeData={generateTree(treeData[mode],target)}
             onCheck={(_,{node:{key}})=>{
                 console.log('onCheck',key);
                 console.log(!isChecked(checkedKeys,key));

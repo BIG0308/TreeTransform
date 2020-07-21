@@ -59,6 +59,7 @@ function TransformTree(props) {
                                 treeData={treeNodeData}
                                 itemSelected={onItemSelect}
                                 checkedKeys={checkedKeys}
+                                target={targetKeys}
                             />
                         )
                     }
